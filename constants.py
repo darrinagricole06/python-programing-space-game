@@ -15,3 +15,5 @@ STARTING_HULL = 100
 
 # --- Galaxy ---
 GALAXY_SIZE = 8
+USE_CUSTOM_PLANETS = False
+PLANETS = []

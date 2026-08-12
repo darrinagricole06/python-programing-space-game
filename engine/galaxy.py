@@ -1,3 +1,32 @@
+import constants
+
+PLANET_DEFAULTS = [
+    {
+        "description": "A mysterious world awaiting exploration",
+        "danger_level": 1,
+        "has_water": True,
+        "encounter": "empty",
+    },
+    {
+        "description": "A rocky outcrop surrounded by debris",
+        "danger_level": 3,
+        "has_water": False,
+        "encounter": "asteroid_field",
+    },
+    {
+        "description": "A bustling outpost on a trade route",
+        "danger_level": 1,
+        "has_water": True,
+        "encounter": "trader",
+    },
+    {
+        "description": "A dark region of space with a bad reputation",
+        "danger_level": 4,
+        "has_water": False,
+        "encounter": "raider",
+    },
+]
+
 PLANET_POOL = [
     {
         "name": "Verdantis",
@@ -87,10 +116,27 @@ PLANET_POOL = [
 
 
 def create_galaxy(size):
-    pool = PLANET_POOL
+    if constants.USE_CUSTOM_PLANETS and len(constants.PLANETS) > 0:
+        pool = []
+        for i in range(len(constants.PLANETS)):
+            planet = constants.PLANETS[i]
+            if type(planet) == str:
+                defaults = PLANET_DEFAULTS[i % len(PLANET_DEFAULTS)]
+                pool.append({
+                    "name": planet,
+                    "description": defaults["description"],
+                    "danger_level": defaults["danger_level"],
+                    "has_water": defaults["has_water"],
+                    "encounter": defaults["encounter"],
+                })
+            else:
+                pool.append(planet)
+    else:
+        pool = PLANET_POOL
+
     if size <= len(pool):
         return pool[:size]
-    # If the galaxy is larger than our pool, cycle through planets again
+
     galaxy = []
     for i in range(size):
         galaxy.append(pool[i % len(pool)])
