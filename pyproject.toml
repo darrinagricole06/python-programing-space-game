@@ -1,0 +1,7 @@
+[project]
+name = "young-innovators-challenge"
+version = "0.1.0"
+description = "A 9-session beginner Python curriculum built by OCEAN AI and delivered in partnership with Absa Bank Seychelles and H. Savy Insurance Company Ltd. Students build a space-themed, text-based game from scratch, progressing from functional to object-oriented programming."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
