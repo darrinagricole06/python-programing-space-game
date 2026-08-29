@@ -6,8 +6,8 @@
 # ============================================================
 
 # --- Your ship ---
-SHIP_NAME = "The Horizon"
-CREW_DESCRIPTION = "A band of explorers seeking fortune at the edge of the galaxy"
+SHIP_NAME = "The Sr. Explorer"
+CREW_DESCRIPTION = "A brave crew of space explorers"
 
 # --- Starting resources ---
 STARTING_OXYGEN = 100
