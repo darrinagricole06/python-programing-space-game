@@ -15,5 +15,14 @@ STARTING_HULL = 100
 
 # --- Galaxy ---
 GALAXY_SIZE = 8
-USE_CUSTOM_PLANETS = False
+USE_CUSTOM_PLANETS = True
 PLANETS = []
+PLANETS.append("Terra nova")
+PLANETS.append("aqua prime")
+PLANETS.append("Solaris")
+PLANETS.append("Destroyer")
+PLANETS.append("Nebula")
+
+
+print(len(PLANETS))
+PLANETS[2] = "Solaris Prime"

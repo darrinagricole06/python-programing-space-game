@@ -1,1 +1,1 @@
-number = input("Please ty[e]"
+number = input("Please type a number: ")
