@@ -26,3 +26,22 @@ PLANETS.append("Nebula")
 
 print(len(PLANETS))
 PLANETS[2] = "Solaris Prime"
+
+PLANETS.append({
+    "name": "Terra nova",
+    "description": "Bioluminescent forests cover the surface",
+    "danger_level": 1,
+    "has_water": True,
+    "encounter": "empty",
+    
+})
+
+PLANETS.append({
+    "name": "aqua prime",
+    "description": "Bioluminescent forests cover the surface",
+    "danger_level": 5,
+    "has_water": True,
+    "encounter": "empty",
+    
+})
+
