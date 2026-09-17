@@ -44,4 +44,3 @@ PLANETS.append({
     "encounter": "empty",
     
 })
-
