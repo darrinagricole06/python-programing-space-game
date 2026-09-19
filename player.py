@@ -1,50 +1,34 @@
-from typing import Literal
-
-
 class Ship:
-    # attributes
-    def __init__(
-        self,
-        oxygen,
-        hull,
-        name,
-        crew
-    ) -> None:
-        # constructor
+    # "data" a.k.a. attributes
+    def __init__(self, 
+                 oxygen, 
+                 hull, 
+                 name, 
+                 crew): # constructor
         self.oxygen = oxygen
         self.hull = hull
         self.name = name
         self.crew = crew
 
-    # methods
-    def __str__(self) -> str:
-        return f"""
-        Ship object with the following parameters:
-        oxygen: {self.oxygen}
-        hull: {self.hull}
-        name: {self.name}
-        crew: {self.crew}
-        """
-
-    def check_defeat_status(
-        self
-    ) -> None | Literal["oxygen depleted", "hull damaged"]:
+    # methods a.k.a "behaviour"
+    def check_defeat_status(self):
         if self.oxygen <= 0:
-            return "oxygen depleted"
+            return "  Oxygen depleted"
         elif self.hull <= 0:
-            return "hull damaged"
-
+            return "  Hull destroyed"
         return None
 
+    # special methods
+    def __str__(self):
+        return f"""
+        Ship object with the following parameters:
+        oxygen = {self.oxygen}
+        hull = {self.hull}
+        name = {self.name}"""
 
-ship_one = Ship(
-    10,
-    100,
-    "The Sr. Explorer",
-    "Awesome crew of space explorers"
-)
+# one "instance" of the "Ship" class
+ship_one = Ship(10, 
+                100, 
+                "Python Crew",
+                "Awesome People")
 
-print(ship_one.check_defeat_status())
-
-a = "abc"
-print(a.upper())
